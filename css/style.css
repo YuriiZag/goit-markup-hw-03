@@ -8,6 +8,8 @@
     --secondary-white-color:#F5F4FA;
     --contacts-link-color: rgba(255,255,255,0.6);
     --hero-button-hover-color: #188CE8;
+    --border-color: #ECECEC;
+    --scondary-border-color: #EEEEEE;
 }
 html{
     box-sizing: border-box;
@@ -29,6 +31,9 @@ body{
     margin-right:auto;
     padding-right: 15px;
     padding-left: 15px;
+}
+header {
+    border-bottom: 1px solid var(--border-color);
 }
 .nav, .hero {
     margin-right: auto;
@@ -216,7 +221,7 @@ nav{
 .team-section{
     background-color: var(--secondary-white-color);
     padding-top: 95px;
-    padding: 95px;
+    padding-bottom: 95px;
 }
 .team-section ul{
     display: flex;
@@ -311,8 +316,8 @@ address{
 /* Portfolio */
 /* Filters */
 .works-section{
-    margin-top: 95px;
-    margin-bottom: 95px;
+    padding-top: 95px;
+    padding-bottom: 95px;
 }
 .w-filters{
     list-style: none;
@@ -347,7 +352,6 @@ address{
     width: 1200px;
     margin: -15px;
 
-    /* background-color: tomato; */
 }
 .works-section .w-filters{
     display: flex;
@@ -369,7 +373,7 @@ address{
 .w-list > li{
     background-color: var(--primary-white-color);
     margin: 15px;
-    outline: 1px solid #EEEEEE; 
+    outline: 1px solid var(--scondary-border-color); 
     
     display: inline-block;
 
