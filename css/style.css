@@ -49,9 +49,6 @@ header >.container{
 }
 
 /* Navigation */
-.flex{
-    display: flex;
-}
 nav{
     display: flex;
     align-items: center;
