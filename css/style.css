@@ -17,12 +17,18 @@ html{
 *, *::before, *::after{
     box-sizing: inherit;
 }
+
 body{
     color: var(--primary-text-color);
     background-color:  var(--primary-white-color);
     font-family: Roboto, sans-serif;
     letter-spacing: 0.03em;
     font-size: 14px;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 /* Контейнер */
 .container{
@@ -32,23 +38,33 @@ body{
     padding-right: 15px;
     padding-left: 15px;
 }
-header {
+header{
     border-bottom: 1px solid var(--border-color);
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
-.nav, .hero {
-    margin-right: auto;
-    margin-left: auto;
+header >.container{
+    display: flex;
+}
+
+/* Navigation */
+.flex{
+    display: flex;
 }
 nav{
     display: flex;
     align-items: center;
-    height: 80px;
 }
-/* Navigation */
+.hero {
+    margin-right: auto;
+    margin-left: auto;
+} 
 .nav-list, .nav-contacts{
     display: flex;
     list-style: none;
     padding-left: 0;
+    align-items: center;
 }
 .nav-list{
     margin: 0;
@@ -87,6 +103,10 @@ nav{
     text-decoration: none;
     color: var(--balck-color);
 }
+.nav-link-logo{
+    display: inline-block;
+    margin-right: 95px;
+}
 .logo-part{
     color: var(--primary-hover-color);
 }
@@ -96,9 +116,7 @@ nav{
     color: var(--balck-color);   
     font-weight: 700;
     font-size: 26px;
-    line-height: 1.19;
-
-    margin-right:95px;
+    line-height: 1.19;  
 }
 
 
@@ -108,7 +126,6 @@ nav{
     background-color: var(--secondary-background-color);
     padding-top: 200px;
     padding-bottom: 200px;
-    margin-bottom: 95px;
 }
 .hero-heading{
     color: var(--primary-white-color);
@@ -152,7 +169,8 @@ nav{
 /* Features */
 
 .f-section{
-    margin-bottom: 95px;
+    padding-top: 95px;
+    padding-bottom: 95px;
 }
 .f-section ul, .team-section ul, .ws-section ul{
     list-style: none;
@@ -162,6 +180,8 @@ nav{
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
+    padding-top: 0;
+    margin-top: 0;
 }
 .f-section li{
     width: 270px;
@@ -196,10 +216,12 @@ nav{
     margin-top: 0;
     margin-bottom: 0;
 }
-
+.f-section img{
+    display: block;
+}
 /* What we doing */
 .ws-section{
-    margin-bottom: 95px;
+    padding-bottom: 95px;
 }
 .work-sphere-heading, .team-heading{
     font-size: 36px;
@@ -212,6 +234,7 @@ nav{
 .ws-section ul{
     display: flex;
     padding: 0;
+    margin: 0;
 }
 .ws-section li+li{
     margin-left: 30px;
@@ -232,9 +255,9 @@ nav{
     background-color: var(--primary-white-color);
     margin-left: 30px;
 
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
-                0px 1px 1px rgba(0, 0, 0, 0.14), 
-                0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow:     0px 1px 3px rgba(0, 0, 0, 0.12), 
+                    0px 1px 1px rgba(0, 0, 0, 0.14), 
+                    0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 .team-section li:first-child{
@@ -246,9 +269,7 @@ nav{
     line-height: 1.18;
     text-align: center;
     
-
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin:0 0 10px 0;
 }
 .teammate-position{
     color: var(--secondary-text-color);
@@ -256,8 +277,12 @@ nav{
     line-height: 1.18;
     text-align: center;
 
-    margin-top: 0;
-    margin-bottom: 30px;
+    margin: 0;
+
+}
+.t-text-container{
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 
@@ -265,6 +290,7 @@ nav{
 footer{
     background-color: var(--secondary-background-color);
     padding-top: 60px;
+    padding-bottom: 60px;
     display: flex;
 }
 footer ul{
@@ -272,7 +298,6 @@ footer ul{
     margin: 0;
     padding: 0;
 
-    margin-bottom: 60px;
 }
 footer li{
     margin-bottom: 10px;
@@ -321,6 +346,7 @@ address{
 }
 .w-filters{
     list-style: none;
+    margin-top: 0;
     margin-bottom: 50px;
 }
 .filter{
@@ -335,6 +361,10 @@ address{
 .filter:hover, .filter:focus{
     background-color: var(--primary-hover-color);
     color: var(--primary-white-color);
+
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+                0px 1px 2px rgba(0, 0, 0, 0.08), 
+                0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .w-filters li+li {
     margin-left: 10px;
@@ -366,8 +396,7 @@ address{
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: -15px;
     
 }
 .w-list > li{
@@ -383,13 +412,16 @@ address{
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    
-    padding-left: 25px;
+
+    margin: 0 0 4px 0;
 }
 .work .w-filter{
     color: var(--secondary-text-color);
     font-size: 16px;
     line-height: 1.88;
-
-    padding-left: 25px;
+    
+    margin: 0;
+}
+.text-container{
+    padding: 20px 24px;
 }
